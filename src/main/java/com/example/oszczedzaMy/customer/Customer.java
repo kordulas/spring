@@ -22,8 +22,11 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Nullable
     private Long id;
+    @Column(name = "first_name")
     private String name;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "join_date")
     private LocalDate accountCreateDate;
     @OneToOne
     @JoinColumn(name = "customer_cart_contest")

@@ -21,6 +21,7 @@ public class Cart {
     private Long id;
 
     @OneToMany
+    @Column(name = "products_in_cart")
     private List<Product> productList;
 
     @Override
