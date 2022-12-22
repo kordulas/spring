@@ -7,7 +7,6 @@ import lombok.ToString;
 import org.eclipse.jdt.annotation.Nullable;
 import org.springframework.stereotype.Component;
 
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -22,7 +21,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Nullable
+    @Column(name = "Product_Id", nullable = true)
     private Long id;
 
     private String productName;
