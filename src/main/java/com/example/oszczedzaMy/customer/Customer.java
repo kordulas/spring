@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+/**
+ * Simple class to represent a customer with basic data
+ * also ready to showing it as db record.
+ * */
 @Entity
 @Component
 @Table(name = "customer")

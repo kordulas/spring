@@ -1,13 +1,17 @@
 package com.example.oszczedzaMy.cart;
 
-import com.example.oszczedzaMy.customer.Customer;
 import com.example.oszczedzaMy.product.Product;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+/**
+ * Simple class to represent a customer cart with product/products
+ * also ready to showing it as db record.
+ * */
 @Entity
 @Component
 @Table(name = "cart")

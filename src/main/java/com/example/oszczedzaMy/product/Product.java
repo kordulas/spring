@@ -6,10 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.eclipse.jdt.annotation.Nullable;
 import org.springframework.stereotype.Component;
-import java.awt.image.BufferedImage;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+/**
+ * Simple class to represent a product with basic data
+ * also ready to showing it as db record.
+ *
+ * */
 @Entity
 @Component
 @Table(name = "product")
