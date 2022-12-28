@@ -1,9 +1,11 @@
 spring:
   datasource:
-    url: "jdbc:h2:mem:test"
+    url: "jdbc:h2:mem:devTest"
     driver-class-name: "org.h2.Driver"
     username: "admin"
-    password: "password"
+    password: "adminpassword"
   h2:
     console:
       enabled: true
+  jpa:
+    show-sql: true

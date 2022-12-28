@@ -31,11 +31,13 @@ public class Product {
     private String productName;
     @Column(name = "regular_price")
     @Nullable
-    private BigDecimal priceBeforeDiscount;
-    @Column(name = "discount_price_")
+    private BigDecimal regularPrice;
+    @Column(name = "price_with_discount_")
     private BigDecimal priceAfterDiscount;
     @Column(name = "added date")
     private LocalDate addedDate;
+    @Column(name = "shop_name ")
+    private String shopName;
   /*  private BufferedImage productPhoto;
     private BufferedImage pricePhoto;*/
 
