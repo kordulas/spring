@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 /**
  * Simple class to represent a customer cart with product/products
@@ -25,8 +26,9 @@ public class Cart {
     private Long id;
 
     @OneToMany
+    @JoinColumn
     @Column(name = "products_in_cart")
-    private List<Product> productList;
+    private List<Product> productList = new ArrayList<>();
 
     @Override
     public String toString() {
