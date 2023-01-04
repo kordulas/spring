@@ -32,7 +32,7 @@ public class Product {
     @Column(name = "regular_price")
     @Nullable
     private BigDecimal regularPrice;
-    @Column(name = "price_with_discount_")
+    @Column(name = "discount_price")
     private BigDecimal priceAfterDiscount;
     @Column(name = "added date")
     private LocalDate addedDate;

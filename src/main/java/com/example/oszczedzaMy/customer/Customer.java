@@ -32,9 +32,11 @@ public class Customer {
     private String lastName;
     @Column(name = "join_date")
     private LocalDate accountCreateDate;
+
     @OneToOne
-    @JoinColumn(name = "customer_cart_contest")
-    private Cart customerCart;
+    @JoinColumn(name = "customer_cart_id")
+    @Nullable
+    private Long customerCartId = Cart.class.;
 
     @Override
     public String toString() {
@@ -42,7 +44,7 @@ public class Customer {
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", accountCreateDate=" + accountCreateDate +
-                ", customerCart=" + customerCart +
+                ", customerCart=" + customerCartId +
                 '}';
     }
 }

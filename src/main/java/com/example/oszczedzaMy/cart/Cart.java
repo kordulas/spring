@@ -1,5 +1,6 @@
 package com.example.oszczedzaMy.cart;
 
+import com.example.oszczedzaMy.customer.Customer;
 import com.example.oszczedzaMy.product.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -26,14 +27,19 @@ public class Cart {
     private Long id;
 
     @OneToMany
-    @JoinColumn
-    @Column(name = "products_in_cart")
+    @JoinColumn(name = "cart_contest")
     private List<Product> productList = new ArrayList<>();
+
+
+    public void addProduct(Product product){
+        productList.add(product);
+    }
 
     @Override
     public String toString() {
         return "Cart{" +
-                "productList=" + productList +
+                "id=" + id +
+                ", productList=" + productList.toString() +
                 '}';
     }
 }
