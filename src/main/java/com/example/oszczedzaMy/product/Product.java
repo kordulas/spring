@@ -1,5 +1,6 @@
 package com.example.oszczedzaMy.product;
 
+import com.example.oszczedzaMy.shop.Shop;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Simple class to represent a product with basic data
@@ -30,8 +32,9 @@ public class Product {
     @Column(name = "product_name")
     private String productName;
 
-    @Column(name = "product_shop")
-    private String productShop;
+    @OneToMany()
+    @JoinColumn(name = "product_shop")
+    private List<Shop> productShops;
 
     @Column(name = "regular_price")
     private BigDecimal regularPrice;
@@ -41,9 +44,6 @@ public class Product {
 
     @Column(name = "added date")
     private LocalDate addedDate;
-
-    @Column(name = "shop_name ")
-    private String shopName;
 
     /**
      * Annotation which help represent image of product with discount price
