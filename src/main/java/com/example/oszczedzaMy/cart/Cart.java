@@ -1,6 +1,5 @@
 package com.example.oszczedzaMy.cart;
 
-import com.example.oszczedzaMy.customer.Customer;
 import com.example.oszczedzaMy.product.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,7 +22,7 @@ import java.util.List;
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Cart_Id", nullable = true)
+    @Column(name = "Cart_Id")
     private Long id;
 
     @OneToMany

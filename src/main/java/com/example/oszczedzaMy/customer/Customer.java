@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.eclipse.jdt.annotation.Nullable;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -24,7 +23,6 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Nullable
     private Long id;
     @Column(name = "first_name")
     private String name;
@@ -33,10 +31,9 @@ public class Customer {
     @Column(name = "join_date")
     private LocalDate accountCreateDate;
 
-    @OneToOne
-    @JoinColumn(name = "customer_cart_id")
-    @Nullable
-    private Long customerCartId = Cart.class.;
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "cart_id")
+    private Cart customerCart;
 
     @Override
     public String toString() {
@@ -44,7 +41,7 @@ public class Customer {
                 "name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", accountCreateDate=" + accountCreateDate +
-                ", customerCart=" + customerCartId +
+                ", customerCart=" + customerCart.getId() +
                 '}';
     }
 }
