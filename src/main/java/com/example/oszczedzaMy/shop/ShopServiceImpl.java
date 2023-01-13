@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class ShopServiceImplementation {
+public class ShopServiceImpl {
 
     private ShopRepository shopRepository;
 
-    public ShopServiceImplementation(ShopRepository shopRepository) {
+    public ShopServiceImpl(ShopRepository shopRepository) {
         this.shopRepository = shopRepository;
     }
 }

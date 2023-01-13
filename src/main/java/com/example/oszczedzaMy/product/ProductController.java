@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Transactional
 public class ProductController {
 
-    private final ProductServiceImplementation productServiceImplementation;
+    private final ProductServiceImpl productServiceImpl;
 
-    public ProductController(ProductServiceImplementation productServiceImplementation) {
-        this.productServiceImplementation = productServiceImplementation;
+    public ProductController(ProductServiceImpl productServiceImpl) {
+        this.productServiceImpl = productServiceImpl;
     }
 }

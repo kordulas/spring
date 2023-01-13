@@ -32,7 +32,10 @@ public class Customer {
     private String lastName;
     @Column(name = "join_date")
     private LocalDate accountCreateDate;
-
+    @Column(name = "pesel")
+    private Long peselNumber;
+    @Column(name = "customer_mail")
+    private String customerMail;
     @OneToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "cart_id")
     private Cart customerCart;
@@ -40,10 +43,13 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", accountCreateDate=" + accountCreateDate +
-                ", customerCart=" + customerCart.getId() +
+                ", peselNumber=" + peselNumber +
+                ", customerMail='" + customerMail + '\'' +
+                ", customerCart=" + customerCart +
                 '}';
     }
 }

@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class CustomerServiceImplementation {
+public class CustomerServiceImpl {
 
     private final CustomerRepository customerRepository;
 
-    public CustomerServiceImplementation(CustomerRepository customerRepository) {
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
 

@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class CartServiceImplementation {
+public class CartServiceImpl {
 
     private CartRepository cartRepository;
 
-    public CartServiceImplementation(CartRepository cartRepository) {
+    public CartServiceImpl(CartRepository cartRepository) {
         this.cartRepository = cartRepository;
     }
 }
